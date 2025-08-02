@@ -1,19 +1,14 @@
+import React from 'react';
 import Header from './components/header';
 import './App.css';
 import './components/header.css';
 import boxIcon from './images/box.png';
-import { Routes } from "react-router"
 
-function IconButton({ onClick, alt = "Box", ...props }) {
+// Додамо компонент IconButton прямо тут (або імпортуй, якщо він окремо)
+function IconButton({ onClick }) {
   return (
-    <button
-      type="button"
-      aria-label="box button"
-      className="icon-button"
-      onClick={onClick}
-      {...props}
-    >
-      <img src={boxIcon} alt={alt} />
+    <button className="icon-button" onClick={onClick}>
+      <img src={boxIcon} alt="Icon" className="icon-image" />
     </button>
   );
 }
@@ -24,10 +19,12 @@ function App() {
       <Header />
       <main>
         <section id="home">Game content</section>
+
         <div className="button-container">
           <IconButton onClick={() => console.log("Icon button clicked")} />
         </div>
-        <section id="game" />
+
+        <section id="game">Game Section Placeholder</section>
       </main>
     </>
   );

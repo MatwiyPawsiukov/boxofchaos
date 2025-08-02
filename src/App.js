@@ -1,12 +1,18 @@
-
+import Header from './components/header';
 import './App.css';
-
+import "./components/header.css"
+import iconButton from './images/box.png';
 function App() {
   return (
-    <div className="App">
-     
-    </div>
+    <>
+      <Header />
+      <main>
+        <section id="home">Game content</section>
+        <section id="Game"></section>
+      </main>
+    </>
   );
 }
 
 export default App;
+
